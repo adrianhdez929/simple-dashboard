@@ -13,5 +13,7 @@ export default (state = initialState, action) => {
                 ...action.payload,
                 isAuthenticated: true,
             };
+        default:
+            return;
     }
 }

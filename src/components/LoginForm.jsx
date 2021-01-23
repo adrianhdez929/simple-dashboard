@@ -41,12 +41,12 @@ function LoginForm(props) {
 	<>
         <Container>
             <Row className="justify-content-center">
-                <Col xs={4} sm={2}>
+                <Col xs={6} sm={2}>
                     <h3>Sign In</h3>
                 </Col>
             </Row>
             <Row className="justify-content-center">
-                <Col xs={6} sm={4}>
+                <Col xs={10} sm={4}>
                     <Form className="border border-color-dark rounded py-2" onSubmit={ handleSubmit }>
                         <Form.Group className="px-3">
                             <Form.Label htmlFor="username">Username</Form.Label>

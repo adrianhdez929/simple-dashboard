@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Redirect, withRouter } from 'react-router-dom';
-import { connect, useDispatch, useStore } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 import { authMock } from '../mocks';
@@ -9,7 +9,6 @@ import { LOGIN_SUCCESS, LOGIN_FAILED } from '../types';
 
 function LoginForm(props) {
     const { isAuthenticated } = props;
-    const store = useStore();
     const dispatch = useDispatch();
 
     const [username, setUsername] = useState(null);

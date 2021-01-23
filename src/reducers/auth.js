@@ -5,7 +5,7 @@ const initialState = {
     isAuthenticated : null,
 };
 
-export default (state = initialState, action) => {
+const authReducer = (state = initialState, action) => {
     switch(action.type) {
         case LOGIN_SUCCESS:
             return {
@@ -17,3 +17,5 @@ export default (state = initialState, action) => {
             return;
     }
 }
+
+export default authReducer;

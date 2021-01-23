@@ -1,12 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/css/index.css';
+import store from './store';
 import reportWebVitals from './reportWebVitals';
+
+import Dashboard from './views/Dashboard';
+import Login from './views/Login';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={ store }>
+      <BrowserRouter>
+        <Switch>
+          <Route path='/dashboard' component={ Dashboard } />
+          <Route path='/login' exact component={ Login } />
+          <Redirect from='*' to='/login' />
+        </Switch>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

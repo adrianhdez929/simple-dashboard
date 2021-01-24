@@ -20,13 +20,13 @@ export default function DashboardAvailable() {
                 />
                 </Col>
                 <Col md={8}>
-                <Card.Text>
-                    { card.description }
-                </Card.Text>                
+                    <Card.Text className="py-2 px-2">
+                        { card.description }
+                    </Card.Text>                
                 </Col>
-                <Col className="justify-content-center">
-                    <Button variant="primary" className="my-1 mx-1">Instalar</Button>
-                    <Button variant="Primary" className="my-1 mx-1">Mas info</Button>
+                <Col className="justify-content-center py-2">
+                        <Button variant="primary" className="my-1 mx-1">Instalar</Button>
+                        <Button variant="primary" className="my-1 mx-1">Mas info</Button>
                 </Col>
             </Row>
         </Card>

@@ -1,4 +1,6 @@
 import React from 'react';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
@@ -10,19 +12,23 @@ export default function DashboardAvailable() {
 	<>
         { appsMock.map((card, index) => {
             return(
-        <Card style={{ display: 'inline-flex' }} className="mx-3 my-3 justify-content-center">
-            <Card.Img variant="top" src="https://cdn.discordapp.com/attachments/802435203477667860/802625866948673567/redmine.png" 
-                style={{ justifyContent: 'center', width: '20%', height: '100px'}}
-            />
-            <div style={{ padding: '0 1em', margin: '1em 0', display: 'inline-flex' }}>
+            <Card className="mx-4 mb-4">
+                <Row className="no-gutters">
+                    <Col md={3}>
+                <Card.Img variant="top" src="https://cdn.discordapp.com/attachments/802435203477667860/802625866948673567/redmine.png" 
+                    style={{ width: '100%', height: '100px'}}
+                />
+                </Col>
+                <Col md={8}>
                 <Card.Text>
                     { card.description }
-                </Card.Text>
-                <div style={{ display: 'block' }}>
-                    <Button variant="primary" className="my-1">Modificar</Button>
-                    <Button variant="danger" className="my-1">Eliminar</Button>
-                </div>
-            </div>
+                </Card.Text>                
+                </Col>
+                <Col className="justify-content-center">
+                    <Button variant="primary" className="my-1 mx-1">Modificar</Button>
+                    <Button variant="danger" className="my-1 mx-1">Eliminar</Button>
+                </Col>
+            </Row>
         </Card>
             )
         })

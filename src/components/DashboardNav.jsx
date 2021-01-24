@@ -9,6 +9,7 @@ export default function DashboardNav(props) {
 	<>
         <Row className="justify-content-center border">
             <Nav
+                style={{ width: '30%' }}
                 variant="pills"
                 activeKey={ props.location.pathname }
                 onSelect={ (selectedKey) => props.history.push(selectedKey) }        

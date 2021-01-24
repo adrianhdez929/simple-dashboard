@@ -31,7 +31,6 @@ function LoginForm(props) {
         event.preventDefault();
         login();
     }    
-    
 
     if (isAuthenticated) {
         return <Redirect to='/dashboard/aplicaciones' />

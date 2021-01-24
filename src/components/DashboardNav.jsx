@@ -10,19 +10,20 @@ export default function DashboardNav(props) {
         <Row className="justify-content-center border">
             <Nav
                 variant="pills"
-                activeKey={ props.location.pathname }                
+                activeKey={ props.location.pathname }
+                onSelect={ (selectedKey) => props.history.push(selectedKey) }        
             >
                 <Nav.Item>
-                    <Nav.Link href="/dashboard/aplicaciones">Aplicaciones</Nav.Link>
+                    <Nav.Link eventKey="/dashboard/aplicaciones">Aplicaciones</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="/dashboard/disponibles">Disponibles</Nav.Link>
+                    <Nav.Link eventKey="/dashboard/disponibles">Disponibles</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="/dashboard/usuarios">Usuarios</Nav.Link>
+                    <Nav.Link eventKey="/dashboard/usuarios">Usuarios</Nav.Link>
                 </Nav.Item>
             </Nav>
-        </Row>
+        </Row>        
 	</>
     );
 }

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Switch, Route} from 'react-router-dom';
+import { Switch, Route, Redirect} from 'react-router-dom';
+import Row from 'react-bootstrap/Row';
 
 import NavBar from '../components/NavBar';
 import DashboardNav from '../components/DashboardNav';
@@ -9,16 +10,18 @@ import DashboardUsers from '../components/DashboardUsers';
 
 
 export default function Dashboard(props) {
-
   return (
     <>
       <NavBar />
-      <DashboardNav location={ props.location } />
-      <Switch>
-        <Route path="/aplicaciones" exact component={ DashboardApps } />
-        <Route path="/disponibles" exact component={ DashboardAvailable } />
-        <Route path="/usuarios" exact component={ DashboardUsers} />     
-      </Switch>
+      <DashboardNav { ...props } />
+      <Row className="justify-content-center py-3">
+        <Switch>
+          <Route path="/dashboard/aplicaciones" exact component={ DashboardApps } />
+          <Route path="/dashboard/disponibles" exact component={ DashboardAvailable } />
+          <Route path="/dashboard/usuarios" exact component={ DashboardUsers} />
+          <Redirect from='/dashboard' to='/dashboard/aplicaciones' />   
+        </Switch>
+      </Row>
     </>
   );
 }

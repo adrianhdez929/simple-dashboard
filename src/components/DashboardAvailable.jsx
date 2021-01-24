@@ -25,8 +25,8 @@ export default function DashboardAvailable() {
                 </Card.Text>                
                 </Col>
                 <Col className="justify-content-center">
-                    <Button variant="primary" className="my-1 mx-1">Modificar</Button>
-                    <Button variant="danger" className="my-1 mx-1">Eliminar</Button>
+                    <Button variant="primary" className="my-1 mx-1">Instalar</Button>
+                    <Button variant="Primary" className="my-1 mx-1">Mas info</Button>
                 </Col>
             </Row>
         </Card>

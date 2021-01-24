@@ -14,7 +14,7 @@ export default function Dashboard(props) {
     <>
       <NavBar />
       <DashboardNav { ...props } />
-      <Row className="justify-content-center py-3">
+      <Row className="justify-content-center py-3 px-3">
         <Switch>
           <Route path="/dashboard/aplicaciones" exact component={ DashboardApps } />
           <Route path="/dashboard/disponibles" exact component={ DashboardAvailable } />
